@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const { extname } = require('path');
 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 
 /* RUTAS */
 app.use(require('./router'))
@@ -23,5 +23,10 @@ app.use(require('./router'))
   app.use(express.static(path.join(__dirname,'./public')))
 
 app.listen(app.get('port'), () => {
-  console.log(`Servidor escuchando en 4000`);
+  console.log(`Servidor escuchando en 3000`);
 })
+
+
+
+
+

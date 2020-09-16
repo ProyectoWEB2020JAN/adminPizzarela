@@ -1,0 +1,48 @@
+
+<body>
+	
+<form action="login" method="post" class="loginform">
+     <div class=whitetop>
+       <h3> Inciar Sesión</h3>
+     </div>
+     <div class="login">Iniciar Sesión</div>
+     <div class="register">Registro</div>
+     <input class="mail" type="text" name="email" placeholder="Usuario" required >
+        <br>
+     <input class="pass" type="password" name="password" placeholder="Contraseña" required>
+        <br>
+     <input class="submit" type="submit" value="Iniciar sesión">
+     
+</form>
+
+<form action="register" method="post" class="registerform">
+    <div class=whitetop>
+       <h3> Registro</h3>
+    </div>
+    <div class="login">Login</div>
+    <div class="register">Register</div>
+    <input class="mail" type="text" name="email" placeholder="Usuario" required >
+       <br>
+    <input class="pass" type="password" name="password" placeholder="Contraseña" required>
+    <input class="pass" type="password" name="password" placeholder="Repetir contraseña" required>
+      <br>
+  <input class="submit" type="submit" value="Registro">
+</form>
+</body>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+$('.register').each(function(i){
+  $(this).click(function(){
+  $('.registerform').addClass('registerform-active');
+  $('.login').css('background-color','#A9E2F3');
+  $('.register').css('color','#313541');
+  });
+});
+$('.login').each(function(i){
+  $(this).click(function(){
+  $('.registerform').removeClass('registerform-active');
+   $('.register').css('background-color','');
+  });
+});
+</script>
